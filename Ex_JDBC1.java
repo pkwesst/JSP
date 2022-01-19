@@ -3,7 +3,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class Ex01_JDBC {
+public class Ex_JDBC1 {
 
 	public static void main(String[] args) {
 
