@@ -7,15 +7,17 @@
 <body>
 	<!-- HTML에서 서버로 값을 보내기 위한 3가지 필수 조건 -->
 	<!-- 어떤 서버 페이지로 값을 보낼건지 지정 -->
-	<!-- 사용자로부터 입력받은 값(input)을 ex02로 보냄 -->
+
+	<!-- 사용자로부터 입력받은 값(input)을 action 속성의 ex02(server file)로 보냄 -->
 	<form action="ex02">  
+
 		<!-- input 태그에 name 속성입력(이름표) -->
 		ID<input type="text" name="id">
 		PW<input type="text" name="pw">
+		NICK<input type="text" name="nick"><br>
 		
 		<!-- 서버로 값을 보내기 위한 버튼 생성(submit) -->
-		<!-- value는 출력되는 text -->
-		<input type="submit" value="전송"> 
+		<input type="submit" value="전송">
 		
 	</form>
 	
