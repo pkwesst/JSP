@@ -1,3 +1,5 @@
+//ex03.java
+
 package com.example;
 
 import java.io.IOException;
@@ -20,10 +22,18 @@ public class ex03 extends HttpServlet {
 		String num2 = request.getParameter("num2");
 
 		//2. 사용자가 입력한 값이 문자 타입이므로 정수 타입으로 변환
-		//int 새 변수명 = Integer.parseInt(문자형 변수);
 		int num3 = Integer.parseInt(num1);
 		int num4 = Integer.parseInt(num2);
 				
 		System.out.println(num3+num4);
-		}
+
+		//3. 브라우저창에 출력
+	      response.setContentType("text/html;charset=utf-8");
+	      PrintWriter out = response.getWriter();
+	      
+	      out.println(num3+num4);
+		
+		
+	}
+
 }
