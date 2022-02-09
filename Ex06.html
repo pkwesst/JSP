@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!--action="파일명" == server file인 파일명에 연결 -->
+	<!--method="post" == post 방식으로 서버에 전송-->
+	<form action="ex05" method="post"> 
+		<h1>취미</h1>
+		공부<input type="checkbox" name="hobby" value="공부">  
+		운동<input type="checkbox" name="hobby" value="운동"> 
+		코딩<input type="checkbox" name="hobby" value="코딩">
+	<!--type="checkbox"는 복수개 선택 가능-->
+	<!--name은 서버에서 사용할 변수명, value는 해당 input을 체크했을 때 어떤 값으로 인식할 건지-->
+		 
+		<h1>성별</h1>
+		남자<input type="radio" name="gender" value="남자">
+		여자<input type="radio" name="gender" value="여자">
+		<br>
+		<input type="submit" value="전송">
+		
+	</form>
+	
+</body>
+</html>
