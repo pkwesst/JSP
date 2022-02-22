@@ -28,6 +28,17 @@
 	<br>num변수 안에 들어있는 값 :
 	<b><%=num%></b>
 	<%--표현식(expression) : JSP에서 Java변수를 웹브라우저에 출력할 수 있는 영역 --%>
-
+	
+	<%--1~100까지의 합을 웹 브라우저에 출력하시오(for) --%>
+	
+	<br>
+	<%
+	int sum = 0;
+	for (int i = 1; i <= 100; i++) {
+			sum += i;
+			System.out.print(sum);
+		}
+	 %>
+	<br>1~100까지의 합 : <b><%=sum%></b>
 </body>
 </html>
