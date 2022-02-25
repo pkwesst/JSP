@@ -3,6 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+	tr{
+		height: 40px;
+		text-align: center;
+	}
+	table{
+		margin: 0 auto;
+	}
+</style>
 
 <meta charset="utf-8">
 <title>Insert title here</title>
@@ -17,14 +26,32 @@
 		String web = request.getParameter("web");
 		String android = request.getParameter("android");
 		String iot = request.getParameter("iot");
+		
+		//평균
+		int java_int = Integer.parseInt(java); //
+		int web_int = Integer.parseInt(web);
+		int iot_int = Integer.parseInt(iot);
+		int android_int = Integer.parseInt(android);
+		int sum = java_int+web_int+iot_int+android_int;
+		float avg = sum/4;
+		
+		//학점
+		String score = "";
+		if (avg <= 100 && avg >= 95) {
+			score = "A+";
+		} else if (avg >= 85) {
+			score = "A";
+		} else if (avg >= 80) {
+			score = "B+";
+		} else if (avg >= 70) {
+			score = "C";
+		} else {
+			score = "F";
+		}
+		
+		
 		//response.setContentType("");
 	%>
-	
-	이름 : <%=name %><br>
-	Java 점수 :<%=java %><br>
-	WEB 점수 : <%=web %><br>
-	iot 점수 :<%=iot %><br>
-	android 점수 :<%=android %><br>
 	
 	<fieldset>
 			<legend>성적확인프로그램</legend>
@@ -35,23 +62,35 @@
 				</tr>
 				<tr>
 					<td>JAVA점수</td>
-					<td><input type="text" name="java"></td>
+					<td><%=java %></td>
 				</tr>
 				<tr>
 					<td>WEB점수</td>
-					<td><input type="text" name="web"></td>
+					<td><%=web %></td>
 				</tr>
 					<tr>
 					<td>IOT점수</td>
-					<td><input type="text" name="iot"></td>
+					<td><%=iot %></td>
 				</tr>		
 				<tr>
 					<td>ANDROID점수</td>
-					<td><input type="text" name="android"></td>
+					<td><%=android %></td>
 				</tr>		
 				<tr>
-					<td colspan="2"><input type="submit" value="확인하기!"></td>
-				</tr>																																			
+					<td>평균</td>
+					<td>
+					<%=avg %>
+					</td>
+				</tr>
+				<tr>
+					<td>학점</td>
+					<td>
+					<h3><%=score%></h3>
+					
+					</td>
+				</tr>
+				
+																																							
 			</table>
 		</fieldset>
 
