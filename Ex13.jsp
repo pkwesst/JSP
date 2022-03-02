@@ -1,7 +1,7 @@
+//ex04error.jsp
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!-- 페이지 지시자 : <%@ 태그이름 errorPage="속성값"%>-->
-<%@ page errorPage="ex04error.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,12 +9,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<!-- java 코드는 스크립틀릿 <% %> 안에 작성 --> 
-<%
-   int result = 2/0;
-%>
 
-<h1><%=result %></h1>
-
+   <img alt="" src="img/error.png">
+   
+   <p> 페이지 에러, 빠른 시일 내에 수정하겠습니다. </p>
+   
 </body>
 </html>
