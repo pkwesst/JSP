@@ -14,8 +14,13 @@
 		for(int i = 0; i < cookies.length; i++){
 			//쿠키의 이름 꺼내기
 			String cookieName = cookies[i].getName();
-			System.out.println(cookieName);
-		}
+			System.out.print(cookieName);
+			
+			//쿠키의 값 꺼내기
+			String cookieValue = cookies[i].getValue();
+			System.out.println("-"+cookieValue);
+		
+		}	
 	%>
 
 </body>
